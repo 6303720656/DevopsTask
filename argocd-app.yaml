@@ -6,12 +6,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/<your-username>/<your-repo>.git'
+    repoURL: 'https://github.com/6303720656/DevopsTask.git'
     targetRevision: HEAD
     path: node-hello
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: default
+    namespace: argocd-app
   syncPolicy:
     automated:
       prune: true
