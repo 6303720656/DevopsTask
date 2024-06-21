@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "node-hello.fullname" . }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ include "node-hello.name" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "node-hello.name" . }}
+    spec:
+      containers:
+        - name: node-hello
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          ports:
+            - containerPort: 3000
