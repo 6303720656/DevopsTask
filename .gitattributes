@@ -1,0 +1,2 @@
+"kubectl.exe filter=lfs diff=lfs merge=lfs -text" 
+kubectl.exe filter=lfs diff=lfs merge=lfs -text
